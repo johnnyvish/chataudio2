@@ -9,15 +9,13 @@ export default function Nav() {
   const { user, isSignedIn } = useUser();
   const { signOut } = useClerk();
 
-  console.log("Is signed in: ", isSignedIn);
-  console.log("User: ", user);
-
   const toggleMobileMenu = () => {
+    console.log("Toggling mobile menu");
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 bg-white p-5 rounded-[1.5rem] shadow-lg z-[1000]">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 w-11/12 bg-white p-5 rounded-[2rem] shadow-lg z-[1000]">
       <div className="mx-auto">
         <div className="flex justify-between items-center">
           <a className="flex items-center space-x-4" href="/">
@@ -74,11 +72,8 @@ export default function Nav() {
         </div>
 
         <div
-          className={`flex flex-col justify-center items-center space-y-3 font-semibold overflow-hidden ${
-            isMobileMenuOpen && isSignedIn
-              ? "opacity-100 h-[100px] transition-all duration-300 ease-in"
-              : "opacity-0 h-0 transition-all duration-300 ease-out"
-          }`}
+          className={`flex flex-col justify-center items-center space-y-3 font-semibold overflow-hidden transition-all duration-300 ease-in-out 
+            ${isMobileMenuOpen ? "opacity-100 h-[100px]" : "opacity-0 h-0"}`}
         >
           {!isSignedIn ? (
             <>

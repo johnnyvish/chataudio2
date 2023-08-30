@@ -78,7 +78,7 @@ function Information() {
             src="https://media.licdn.com/dms/image/C4D03AQHMXaKYQBS4xg/profile-displayphoto-shrink_800_800/0/1600825079945?e=2147483647&v=beta&t=xeLXLoLsiuuTO93byBQEg46kr9gkrFrUWoqJYEBrc2E"
             alt="User Profile"
           />
-          <p className="text-xl mt-2 font-semibold">Akshaj Tyagi</p>
+          <p className="text-xl mt-2 font-semibold">Akshaj</p>
         </div>
         <div className="flex flex-col justify-center items-center space-y-2">
           <div className="flex flex-col justify-center items-center w-60 h-14 bg-white rounded-[1rem]">
